@@ -24,7 +24,6 @@ int main()
     g.elements_count = 0;
     g.elements = NULL;
     g.connections = NULL;
-//    g.connections = (struct connection*)malloc(sizeof(struct connection));
     int finished = 0;
     
     while(!finished)
@@ -59,9 +58,6 @@ int main()
             case 3:
             {
                 char* filename = "out.txt";
-//                 printf("Enter filename: ");
-//                 scanf("%s", filename);
-
                 FILE* f = fopen(filename, "w");
                 fprintf(f, "graph g {\n");
                 for(i = 0; i != g.elements_count; ++i)
